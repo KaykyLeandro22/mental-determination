@@ -1,0 +1,578 @@
+body {
+    background-image: url("imagens/space.webp");
+    background-size: cover;
+}
+
+/* container */
+
+.container {
+    max-width: 1200px;
+    margin: 0px auto 0 auto;
+    padding: 20px;
+}
+
+/* cabeçalho */
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: rgb(229, 255, 0);
+    padding: 20px 0 40px 0;
+    text-align: center;
+}
+
+.header-topo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.foto-perfil {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #e6ff00;
+    object-fit: cover;
+    box-shadow: 0 0 10px #e6ff00;
+}
+
+h1 {
+    font-family: 'Tiny5', sans-serif;
+}
+
+ul#menu {
+    display: flex;
+    list-style-type: none;
+    justify-content: right;
+    padding: 0;
+    margin: 30px;
+    gap: 20px;
+}
+
+a {
+    color: rgb(232, 245, 252);
+    text-decoration: none;
+    font-family: 'Tiny5', sans-serif;
+    transition: all 0.3s ease;
+}
+
+#menu a:hover {
+    background-color: #e5ff00;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transform: scale(1.05);
+}
+
+.sistema-nivel {
+    background-color: #000;
+    border: 2px solid #e5ff00;
+    width: 100px;
+    padding: 1px;
+}
+
+/* formatação de texto */
+
+h2 {
+    font-size: 25px;
+    text-align: center;
+    color: #e5ff00;
+    font-family: 'Tiny5', sans-serif;
+}
+
+h3 {
+    color: #e5ff00;
+    font-family: 'Tiny5', sans-serif;
+}
+
+p {
+    font-size: 12px;
+    color: rgb(197, 173, 127);
+    text-align: center;
+    font-family: 'Tiny5', sans-serif;
+}
+
+p#modalTexto {
+    font-size: 15px;
+}
+
+/* botões */
+
+button#botao-criar {
+    font-size: 18px;
+    font-family: 'Tiny5', sans-serif;
+    color: black;
+    padding: 10px 20px;
+    background-color: #e5ff00;
+    border: 2px solid rgb(201, 181, 5);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button#botao-criar:hover {
+    box-shadow: 0 0 10px #e5ff00;
+}
+
+button#botao-salvar {
+    font-family: 'Tiny5', sans-serif;
+}
+
+.btn-trocar-nome {
+    display: block;
+    margin: 20px auto;
+    background-color: transparent;
+    border: 2px solid #e5ff00;
+    color: #e5ff00;
+    padding: 6px 14px;
+    font-family: 'Tiny5', sans-serif;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-trocar-nome:hover {
+    background-color: #e5ff00;
+    color: black;
+    box-shadow: 0 0 8px #e5ff00;
+}
+
+.btn-ver-todas,
+.btn-audio {
+    background: #e5ff00;
+    color: black;
+    border: none;
+    padding: 6px 12px;
+    font-family: 'Tiny5', sans-serif;
+    cursor: pointer;
+}
+
+.btn-fechar {
+    margin-top: 15px;
+    background-color: transparent;
+    border: 2px solid #e5ff00;
+    color: #e5ff00;
+    padding: 8px 16px;
+    font-family: 'Tiny5', sans-serif;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-fechar:hover {
+    background-color: #e5ff00;
+    color: black;
+    box-shadow: 0 0 8px #e5ff00;
+    transform: scale(1.05);
+}
+
+.btn-excluir {
+    background-color: transparent;
+    border: 2px solid red;
+    color: red;
+    padding: 6px 10px;
+    font-family: 'Tiny5', sans-serif;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 6px;
+}
+
+.btn-excluir:hover {
+    background-color: red;
+    color: black;
+    box-shadow: 0 0 6px red;
+}
+
+/* layouts */
+
+.layout-principal {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+#lado-esquerdo,
+#lado-direito {
+    width: 350px;
+    min-height: 300px;
+    border: 2px solid #e5ff00;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px #e5ff00;
+    font-family: 'Tiny5', sans-serif;
+}
+
+.centro-principal {
+    width: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* formulários */
+
+#meuFormulario {
+    width: 100%;
+    max-width: 500px;
+    border: 2px solid #e5ff00;
+    padding: 20px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#meuFormulario input,
+#meuFormulario textarea {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 8px;
+    background: black;
+    border: 2px solid #e5ff00;
+    color: #e5ff00;
+    font-family: 'Tiny5', sans-serif;
+}
+
+#meuFormulario button {
+    background: #e5ff00;
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* memórias */
+
+.memoria-retro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(10, 10, 10, 0.9);
+    border: 2px solid #e5ff00;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 6px;
+    box-shadow: 0 0 8px #e5ff00;
+}
+
+.memoria-retro h4 {
+    color: #ffffff;
+    font-size: 14px;
+    margin: 0;
+}
+
+.memoria-retro span {
+    font-size: 11px;
+    color: #e5ff00;
+}
+
+.memoria-retro button {
+    background-color: #e5ff00;
+    color: black;
+    border: none;
+    padding: 6px 10px;
+    font-family: 'Tiny5', sans-serif;
+    cursor: pointer;
+}
+
+.memoria-retro button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 6px #e5ff00;
+}
+
+/* modais no geral */
+
+.modal,
+.modal-oculto {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.modal-conteudo {
+    background-color: rgba(15, 15, 15, 0.95);
+    border: 3px solid #e5ff00;
+    box-shadow: 0 0 15px #e5ff00;
+    padding: 25px;
+    width: 400px;
+    border-radius: 8px;
+    text-align: center;
+    color: white;
+
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-conteudo::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-conteudo::-webkit-scrollbar-thumb {
+    background: #e5ff00;
+    border-radius: 4px;
+}
+
+/* modal overlay */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #0f0f0f;
+    border: 2px solid #e6ff00;
+    box-shadow: 0 0 20px #e6ff00, 0 0 40px rgba(230, 255, 0, 0.4);
+    padding: 25px;
+    border-radius: 14px;
+    width: 320px;
+    text-align: center;
+    color: #e6ff00;
+    animation: surgir 0.25s ease-out;
+}
+
+.modal-content p {
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    background: #000;
+    border: 2px solid #e6ff00;
+    border-radius: 8px;
+    color: #e6ff00;
+    outline: none;
+    box-shadow: 0 0 8px rgba(230, 255, 0, 0.5);
+}
+
+.modal-content input:focus {
+    box-shadow: 0 0 12px #e6ff00;
+}
+
+.modal-actions {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-actions button {
+    padding: 8px 15px;
+    background: transparent;
+    border: 2px solid #e6ff00;
+    border-radius: 8px;
+    color: #e6ff00;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.modal-actions button:hover {
+    background: #e6ff00;
+    color: #000;
+    box-shadow: 0 0 12px #e6ff00;
+}
+
+/* rodapé */
+
+footer {
+    border-top: 2px solid #e5ff00;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+#inputMusica {
+    margin-top: 10px;
+    color: #e5ff00;
+}
+
+audio {
+    width: 30%;
+    margin-top: 15px;
+    filter: drop-shadow(0 0 5px #e5ff00);
+}
+
+/* busca a musica */
+
+.busca-musica {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.busca-musica input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+}
+
+.busca-musica button {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.resultado-busca {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card-musica,
+.card-musica-salva {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    color: white;
+}
+
+.card-musica {
+    width: 200px;
+}
+
+.card-musica img,
+.card-musica-salva img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-musica-salva img {
+    margin-bottom: 10px;
+}
+
+.card-musica button,
+.card-musica-salva button {
+    margin-top: 10px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+
+.card-musica-salva button {
+    margin: 5px;
+}
+
+/* player */
+
+.player-fixo {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #111;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+}
+
+.player-fixo img {
+    width: 50px;
+    border-radius: 6px;
+}
+
+.player-completo {
+    margin: 20px auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+.grid-musicas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* emotion tracker */
+
+.emotion-tracker {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.emotion {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    opacity: 0.6;
+    position: relative;
+}
+
+.emotion:hover {
+    transform: scale(1.2);
+}
+
+.emotion.selected {
+    opacity: 1;
+    box-shadow: 0 0 10px white;
+}
+
+.red { background: #ff2e2e; }
+.blue { background: #2e6bff; }
+.yellow { background: #e6ff00; }
+.green { background: #00ff88; }
+.purple { background: #a64dff; }
+.gray { background: #777; }
+.white { background: white; }
+
+.emotion::after {
+    content: attr(data-emotion);
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #222;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.emotion:hover::after {
+    opacity: 1;
+}
+
+/* animações */
+
+@keyframes surgir {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

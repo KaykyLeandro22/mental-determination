@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#e6ff00">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+    </style>
+
+    <title>Mental Determination</title>
+</head>
+
+<body>
+
+    <div id="modalOverlay" class="modal-overlay hidden">
+        <div class="modal-content">
+            <p id="modalMensagem"></p>
+            <input type="text" id="modalInput">
+            <div class="modal-actions">
+                <button id="modalCancelar">Cancelar</button>
+                <button id="modalConfirmar">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalConteudoOverlay" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div id="modalConteudoInterno"></div>
+            <div class="modal-actions">
+                <button onclick="fecharModalConteudo()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="modalMemoria" class="modal-oculto">
+        <div class="modal-conteudo">
+            <h3 id="modalTitulo"></h3>
+            <p id="modalData"></p>
+            <p id="modalTexto"></p>
+            <button class="btn-fechar" onclick="fecharModal()">Fechar</button>
+        </div>
+    </div>
+
+    <div id="modal-memorias" class="modal">
+        <div class="modal-conteudo">
+            <span class="fechar" onclick="fecharModalMemorias()">
+                &times;
+            </span>
+
+            <h3>Todas as Memórias</h3>
+            <div id="lista-memorias-modal"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-topo">
+            <img id="fotoPerfilHeader" class="foto-perfil">
+            <h1>♥ MENTAL DETERMINATION ♥</h1>
+        </div>
+
+        <ul id="menu">
+            <li><a href="#" onclick="mostrarQuantidade()">Meus Pontos</a></li>
+            <li><a href="#" onclick="mostrarPerfil()">Perfil</a></li>
+            <li><a href="#" onclick="sair()">Sair</a></li>
+        </ul>
+
+        <div class="sistema-nivel">
+            <h3 id="nivelTitulo">LVL 1</h3>
+
+            <div class="barra-container">
+                <div id="barraProgresso" class="barra-progresso"></div>
+            </div>
+
+            <p id="textoProgresso">0 / 100 pontos</p>
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <h2>Bem-vindo(a) de volta, [Nome]!</h2>
+
+        <button class="btn-trocar-nome" onclick="trocarNome()">
+            Trocar Nome
+        </button>
+
+        <p>
+            Lembre-se: "Você tem algo chamado determinação,
+            contanto que você aguente, contanto que você faça o que está
+            em seu coração, eu acredito que você pode fazer a coisa certa."
+        </p>
+
+        <div class="layout-principal">
+
+        
+            <aside id="lado-esquerdo">
+                <h3>Último Ponto Salvo</h3>
+                <button onclick="verTodasMemorias()">Ver Memórias</button>
+            </aside>
+
+        
+            <section class="centro-principal">
+
+                <h2>Nível de Determinação:</h2>
+
+                <button id="botao-criar" onclick="toggleFormulario()">
+                    Criar Novo Ponto de Determinação
+                </button>
+
+                <div id="pontoSalvo"></div>
+
+                <div id="meuFormulario">
+                    <h3>Novo Ponto</h3>
+
+                    <input type="text" id="tituloPonto" placeholder="Título">
+
+                    <textarea id="textoPonto" placeholder="Conte aqui o que quiser:"></textarea>
+
+                    <h3>O que você está sentindo hoje?</h3>
+
+                    <div class="emotion-tracker">
+                        <div class="emotion yellow selected" data-emotion="felicidade"></div>
+                        <div class="emotion red" data-emotion="raiva"></div>
+                        <div class="emotion blue" data-emotion="tristeza"></div>
+                        <div class="emotion green" data-emotion="nojo"></div>
+                        <div class="emotion purple" data-emotion="medo"></div>
+                        <div class="emotion white" data-emotion="neutro"></div>
+                        <div class="emotion gray" data-emotion="não sei"></div>
+                    </div>
+
+                    <button id="botao-salvar">Salvar</button>
+                </div>
+
+                <div id="inputPonto"></div>
+
+            </section>
+
+            <aside id="lado-direito">
+                <h3>Meus Pontos de Determinação</h3>
+            </aside>
+
+        </div>
+
+    </main>
+
+
+    <footer>
+
+        <h2>Escolha aqui a sua música para relaxar e escrever:</h2>
+
+        <audio id="player" controls></audio>
+        <br><br>
+
+        <input type="file" id="inputMusica" accept="audio/*">
+
+        <button onclick="carregarMusica()" class="btn-audio">
+            Adicionar Música
+        </button>
+
+        <p>&copy; Feito e Idealizado por: Kayky Paiva</p>
+
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="usuario.js"></script>
+    <script src="buscaMusica.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsmediatags@3.9.5/dist/jsmediatags.min.js"></script>
+
+</body>
+</html>

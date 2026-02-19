@@ -215,8 +215,9 @@ function obterCorEmocao(emocao) {
         case "nojo":       return "#00ff88";
         case "medo":       return "#a64dff";
         case "não sei":    return "#777";
-        case "neutro":     return "ffff";
+        case "neutro":     return "#ffff";
         default:           return "#e6ff00";
     }
 }
+
 

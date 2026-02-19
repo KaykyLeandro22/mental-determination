@@ -1,5 +1,5 @@
 body {
-    background-image: url("imagens/space.webp");
+    background-image: url("space.webp");
     background-size: cover;
 }
 
@@ -576,3 +576,4 @@ audio {
         opacity: 1;
     }
 }
+

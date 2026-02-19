@@ -1,2 +1,21 @@
-# mental-determination
-O projeto chamado "Mental Determination" tem a função de ser um diário pessoal/emocional, cujo a pessoa escreve com título, texto e "emoção" algum evento do seu dia; focando em desenvolvimento pessoal. Utiliza-se o localStorage para persistência de dados e possui suporte a (PWA), permitindo instalação como aplicativo.
+# Pontos de Determinação
+
+Aplicação web para registro de memórias diárias com sistema de emoções coloridas.
+
+##  Tecnologias
+- HTML5
+- CSS3
+- JavaScript
+- LocalStorage
+- Service Worker (PWA)
+
+##  Funcionalidades
+- Salvar memórias com título, texto e data
+- Associação de emoção com cor personalizada
+- Visualização do último ponto salvo
+- Listagem das memórias recentes
+- Exclusão de registros
+- Instalação como aplicativo (PWA)
+
+##  Armazenamento
+Os dados são salvos localmente no navegador via localStorage.
